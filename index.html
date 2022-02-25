@@ -5,6 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      .team {
+        background-color: burlywood; 
+        padding: 50px;
+        text-align: center;
+        border: chocolate 2px solid;
+      }
+
+      .team-score {
+        background-color: black;
+        padding: 20px;
+        color: red;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 40px;
+      }
+    </style>
 </head>
 <body>
     <table>
@@ -15,8 +31,14 @@
       </thead> 
       <tbody>
         <tr>
-          <td>Team A</td>
-          <td>Team B</td>
+          <td class="team"> 
+            <div class="team-score">98</div>
+            <div>Team A</div>
+          </td>
+          <td class="team">
+            <div class="team-score">100</div>
+            <div>Team B</div>
+          </td>
         </tr>
         <tr>
           <td>Team A Button</td>
