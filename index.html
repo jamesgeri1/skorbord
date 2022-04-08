@@ -72,17 +72,17 @@
       <tbody>
         <tr>
           <td class="team"> 
-            <div class="team-score">98</div>
+            <div class="team-score team-score-a">98</div>
             <div>Team A</div>
           </td>
           <td class="team">
-            <div class="team-score">100</div>
+            <div class="team-score team-score-b">100</div>
             <div>Team B</div>
           </td>
         </tr>
         <tr>
           <td class="team-buttons">
-            <button class="button1">1</button>
+            <button class="button1" onclick="incrementScore('A', 1)">1</button>
             <button class="button3">3</button>
             <button class="button-1">-1</button>
           </td>
@@ -95,6 +95,27 @@
       </tbody>
     </table>
 
+    <script>
+      let teamAScore = 0;
+      let teamBScore = 0;
+
+      function incrementScore(team, score) {
+        if (team === 'A') {
+          teamAScore += score
+          renderScore(team)
+        }
+      }
+
+      function renderScore(team) {
+        if (team === 'A') {
+          const el = document.querySelector('.team-score-a');
+          console.log(el);
+          el.textContent = teamAScore;
+        }
+      }
+
+      renderScore('A');
+    </script>
 
 </body>
 </html>
